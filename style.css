@@ -1,0 +1,84 @@
+body {
+  background: linear-gradient(45deg, #47438c, #2c4b79, #82416d, #763b82);
+  background-size: 600% 600%;
+  animation: colors 5s ease infinite;
+}
+
+.load {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*change these sizes to fit into your project*/
+  width: 100px;
+  height: 100px;
+}
+
+.load hr {
+  border: 0;
+  margin: 0;
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  border-radius: 50%;
+  animation: spin 2s ease infinite
+}
+
+.load :first-child {
+  background: #3227fa;
+  animation-delay: -1.5s
+}
+
+.load :nth-child(2) {
+  background: #19ff05;
+  animation-delay: -1s
+}
+
+.load :nth-child(3) {
+  background: #ff05b0;
+  animation-delay: -0.5s
+}
+
+
+.load :last-child {
+  background: #da1fff
+}
+
+@keyframes spin {
+
+  0%,
+  100% {
+    transform: translate(10px, 10px) rotate(0deg)
+  }
+
+  25% {
+    transform: translate(290%)
+  }
+
+  50% {
+    transform: translate(360%, 360%)
+  }
+
+  75% {
+    transform: translate(0, 460%)
+  }
+
+  95% {
+    transform: translate(0, 590%)
+  }
+}
+
+@keyframes colors {
+  0% {
+    background-position: 0% 30%;
+  }
+
+  30% {
+    background-position: 30% 50%;
+  }
+
+  50% {
+    background-position: 50% 60%;
+  }
+
+}
